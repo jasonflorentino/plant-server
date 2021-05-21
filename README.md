@@ -1,16 +1,34 @@
-# Plants API
+# 🪴 Plant Tracker Server
+***A simple Express server for week 7 review***
 
-## AUTHENTICATION
+# Installation
+
+1. Clone or download this repo.
+2. Install dependencies:
+```
+$ npm install
+```
+3. Set environment variables: Replace `.env_sample` with `.env` and set the port number and API key.
+4. Start the server:
+```
+$ node index.js
+```
+
+# API
+
+## 🔒 AUTHENTICATION
 You must provide an API key as a query string to every request.  
-`?api_key=<YOUR API KEY>`
+```
+?api_key=<YOUR API KEY>
+```
 
-## GET
+## 💐 GET
 ### /plants 
-Gets an array of all plants.
+- Gets an array of all plants.
 
 ### /plants/:id
-Gets a single plant by its id.  
-Example response:
+- Gets a single plant by its id.  
+- Example response:
 ```
 {
   "id": 1,
@@ -22,10 +40,10 @@ Example response:
 }
 ```
 
-## POST
+## 🌱 POST
 ### /plants
-Adds a new plant record.  
-*Requires a body:
+- Adds a new plant record.  
+- Requires a body:
 ```
 {
   "name": "Name",
@@ -35,19 +53,25 @@ Adds a new plant record.
   "last_watered": "YYYY-MM-DD" (optional)
 }
 ```
-Response: The newly created plant object
+- Response: The newly created plant object
 
-## DELETE
+## 🥀 DELETE
 ### /plants/:id
-Deletes a single plant by its id.  
-Response: # of plant records
+- Deletes a single plant by its id.  
+- Response: # of plant records
 
-## PUT
+## 🍀 PUT
 ### /plants/edit/:id
-Edits a plant by its id.  
-*Requires a body with the properties to be updated.  
-Response: The updated plant object
+- Edits a plant by its id.  
+- Requires a body with the properties to be updated. Example:
+```
+{
+  "name": "Michael",
+  "water_frequency": 5
+}
+```
+- Response: The updated plant object
 
 ### /plants/water/:id
-Updates the last_watered date to the current time.  
-Response: The updated plant object
+- Updates the last_watered date to the current time.  
+- Response: The updated plant object
