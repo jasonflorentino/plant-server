@@ -39,7 +39,7 @@ async function createPlant(plant) {
     throw `You must provide a water_frequency for the number of days.`;
   }
   if (!plant.image_url) {
-    throw `You must provide an image_ url for the image of this plant.`;
+    throw `You must provide an image_url for the image of this plant.`;
   }
   if (plant.last_watered && !DATE_RE.test(plant.last_watered)) {
     throw `If providing a last_watered date, please use the format YYYY-MM-DD.`;
@@ -85,11 +85,11 @@ async function editPlant(id, body) {
 
   if (!plant) throw `Could not find a plant with ID: ${id}`;
 
-  plant.name            = body.name || plant.name;
-  plant.type            = body.type || plant.type;
+  plant.name = body.name || plant.name;
+  plant.type = body.type || plant.type;
   plant.water_frequency = body.water_frequency || plant.water_frequency;
-  plant.image_url       = body.image_url || plant.image_url;
-  plant.last_watered    = getEpochTime(body.last_watered) || plant.last_watered;
+  plant.image_url = body.image_url || plant.image_url;
+  plant.last_watered = getEpochTime(body.last_watered) || plant.last_watered;
 
   writeFile(data);
   return plant;
@@ -120,5 +120,5 @@ function writeFile(data) {
 }
 
 function getEpochTime(time) {
-  return new Date(time + "T00:00:00").getTime()
+  return new Date(time + "T00:00:00").getTime();
 }

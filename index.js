@@ -1,7 +1,7 @@
 require('dotenv').config();
 const errorHandler = require('./utils/error_handler');
-const ratelimiter = require('./utils/rate_limiter');
 const authenticate = require('./utils/authenticate');
+const ratelimiter = require('./utils/rate_limiter');
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
