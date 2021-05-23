@@ -3,7 +3,7 @@
 
 # Installation
 
-1. Clone or download this repo.
+1. Clone or download [this repo](https://github.com/jasonflorentino/plant-server).
 2. Install dependencies:
 ```
 $ npm install
