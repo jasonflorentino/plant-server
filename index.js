@@ -16,10 +16,12 @@ app.use(helmet());
 app.use(cors());
 app.use(ratelimiter);
 app.use(express.json());
-app.use(authenticate);
+app.use(express.static(__dirname + '/public'))
 
 // Routes
-app.use('/plants', require('./routes/plants.controller'));
+app.use('/', require('./routes/home/home.controller'));
+app.use(authenticate);
+app.use('/plants', require('./routes/plants/plants.controller'));
 
 app.use(errorHandler);
 
