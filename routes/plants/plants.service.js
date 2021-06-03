@@ -14,8 +14,7 @@ module.exports = {
 };
 
 async function getAll() {
-  const data = readFile();
-  return data;
+  return readFile();
 }
 
 async function getById(id) {

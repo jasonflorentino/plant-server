@@ -1,10 +1,11 @@
 module.exports = errorHandler;
 
 function errorHandler(err, req, res, next) {
+    // From 'throw' -- client errors
     if (typeof (err) === 'string') {
         return res.status(400).json({ message: err });
     }
     
-    // default to 500 server error
+    // From 'throw new Error()' -- server errors
     return res.status(500).json({ message: err.message });
 }

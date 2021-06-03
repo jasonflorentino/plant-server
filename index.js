@@ -23,6 +23,7 @@ app.use('/', require('./routes/home/home.controller'));
 app.use(authenticate);
 app.use('/plants', require('./routes/plants/plants.controller'));
 
+// Errors
 app.use(errorHandler);
 
 // Server

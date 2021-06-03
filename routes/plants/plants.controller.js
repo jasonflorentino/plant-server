@@ -32,7 +32,7 @@ function createPlant(req, res, next) {
 
 function deletePlant(req, res, next) {
   plantsService.deletePlant(req.params.id)
-    .then(newPlant => res.status(200).json(newPlant))
+    .then(plantsCount => res.status(200).json(plantsCount))
     .catch(err => next(err));
 }
 
