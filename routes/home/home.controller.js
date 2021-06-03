@@ -10,8 +10,8 @@ module.exports = router;
 function homepage(_req, res, next) {
   homeService.homepage()
     .then(homepage => res
-                      .status(200)
-                      .setHeader('Content-Type', 'text/html')
-                      .send(homepage))
+      .status(200)
+      .setHeader('Content-Type', 'text/html')
+      .send(homepage))
     .catch(err => next(err));
 }
