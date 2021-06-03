@@ -83,7 +83,7 @@ async function editPlant(id, body) {
   const data = readFile();
   const plant = data.find(plant => plant.id === id);
 
-  if (!plant) throw `Could not find a plant with ID: ${id}`;
+  if (!plant) throw new Error(`Could not find a plant with ID: ${id}`);
 
   plant.name = body.name || plant.name;
   plant.type = body.type || plant.type;
