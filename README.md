@@ -8,7 +8,7 @@
 ```
 $ npm install
 ```
-3. Set environment variables: Replace `.env_sample` with `.env` and set the port number and API key.
+3. Set environment variables: Create `.env` based on `.env_sample` and set the port number and API key.
 4. Start the server:
 ```
 $ node index.js
