@@ -2,6 +2,7 @@ require('dotenv').config();
 const errorHandler = require('./utils/error_handler');
 const authenticate = require('./utils/authenticate');
 const ratelimiter = require('./utils/rate_limiter');
+const { graphqlHTTP } = require('express-graphql');
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -22,6 +23,7 @@ app.use(express.static(__dirname + '/public'))
 app.use('/', require('./routes/home/home.controller'));
 app.use(authenticate);
 app.use('/plants', require('./routes/plants/plants.controller'));
+app.use('/graphql', graphqlHTTP({schema: require('./graphql/schema')}));
 
 // Errors
 app.use(errorHandler);
