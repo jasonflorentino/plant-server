@@ -12,7 +12,7 @@ $ npm install
 4. Start the server:
 ```
 $ node index.js
-# Run with change watcher:
+# Or run with change watcher:
 $ npm run dev
 ```
 
