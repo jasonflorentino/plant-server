@@ -5,13 +5,14 @@
 
 1. Clone or download [this repo](https://github.com/jasonflorentino/plant-server).
 2. Install dependencies:
-```
+```bash
 $ npm install
 ```
 3. Set environment variables: Create `.env` based on `.env_sample` and set the port number and API key.
 4. Start the server:
-```
+```bash
 $ node index.js
+
 # Or run with change watcher:
 $ npm run dev
 ```
