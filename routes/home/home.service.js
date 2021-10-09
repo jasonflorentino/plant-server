@@ -1,12 +1,12 @@
 const marked = require("marked");
-const fs = require('fs');
+const fs = require("fs");
 
 module.exports = {
   homepage,
 };
 
 async function homepage() {
-  const markdown = fs.readFileSync('./README.md', 'utf8');
+  const markdown = fs.readFileSync("./README.md", "utf8");
   const html = marked(markdown);
   const webpage = makeHtmlDoc(html);
   return webpage;
@@ -27,5 +27,5 @@ function makeHtmlDoc(bodyContent) {
       ${bodyContent}
     </body>
     </html>
-  `
+  `;
 }

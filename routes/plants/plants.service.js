@@ -1,8 +1,8 @@
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 const FILE_PATH = "./data/plants.json";
-const DATE_RE = /^[12]\d{3}\-(0+[1-9]|1[012])\-(0+[1-9]|[12][0-9]|3[01])$/ // YYYY-MM-DD
+const DATE_RE = /^[12]\d{3}-(0+[1-9]|1[012])-(0+[1-9]|[12][0-9]|3[01])$/; // YYYY-MM-DD
 
 module.exports = {
   getAll,
@@ -18,7 +18,7 @@ async function getAll() {
 }
 
 async function getById(id) {
-  if (!id) throw `You must provide an id.`;
+  if (!id) throw "You must provide an id.";
 
   const data = readFile();
   const plant = data.find(plant => plant.id === id);
@@ -29,29 +29,29 @@ async function getById(id) {
 
 async function createPlant(plant) {
   if (!plant.name) {
-    throw `You must provide a name.`;
+    throw "You must provide a name.";
   }
   if (!plant.type) {
-    throw `You must provide a type.`;
+    throw "You must provide a type.";
   }
   if (!plant.water_frequency) {
-    throw `You must provide a water_frequency for the number of days.`;
+    throw "You must provide a water_frequency for the number of days.";
   }
   if (!plant.image_url) {
-    throw `You must provide an image_url for the image of this plant.`;
+    throw "You must provide an image_url for the image of this plant.";
   }
   if (plant.last_watered && !DATE_RE.test(plant.last_watered)) {
-    throw `If providing a last_watered date, please use the format YYYY-MM-DD.`;
+    throw "If providing a last_watered date, please use the format YYYY-MM-DD.";
   }
 
   const newPlant = {
-    "id": uuidv4(),
-    "name": plant.name,
-    "type": plant.type,
+    "id":              uuidv4(),
+    "name":            plant.name,
+    "type":            plant.type,
     "water_frequency": plant.water_frequency,
-    "image_url": plant.image_url,
-    "last_watered": getEpochTime(plant.last_watered) || 0
-  }
+    "image_url":       plant.image_url,
+    "last_watered":    getEpochTime(plant.last_watered) || 0
+  };
 
   const data = readFile();
   data.push(newPlant);
@@ -60,7 +60,7 @@ async function createPlant(plant) {
 }
 
 async function deletePlant(id) {
-  if (!id) throw `You must provide an id.`;
+  if (!id) throw "You must provide an id.";
 
   const data = readFile();
   const updatedData = data.filter(plant => plant.id !== id);
@@ -76,7 +76,7 @@ async function deletePlant(id) {
 async function editPlant(id, body) {
 
   if (body.last_watered && !DATE_RE.test(body.last_watered)) {
-    throw `If providing a last_watered date, please use the format YYYY-MM-DD.`;
+    throw "If providing a last_watered date, please use the format YYYY-MM-DD.";
   }
 
   const data = readFile();
@@ -95,7 +95,7 @@ async function editPlant(id, body) {
 }
 
 async function waterPlant(id) {
-  if (!id) throw `You must provide an id.`;
+  if (!id) throw "You must provide an id.";
 
   const data = readFile();
   const plantToWater = data.find(plant => plant.id === id);

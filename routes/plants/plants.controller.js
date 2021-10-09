@@ -1,14 +1,14 @@
-const express = require('express');
-const plantsService = require('./plants.service');
+const express = require("express");
+const plantsService = require("./plants.service");
 const router = express.Router();
 
-// routes
-router.get('/', getAll);
-router.get('/:id', getById);
-router.post('/', createPlant);
-router.delete('/:id', deletePlant);
-router.put('/edit/:id', editPlant);
-router.put('/water/:id', waterPlant);
+// Routes
+router.get("/", getAll);
+router.get("/:id", getById);
+router.post("/", createPlant);
+router.delete("/:id", deletePlant);
+router.put("/edit/:id", editPlant);
+router.put("/water/:id", waterPlant);
 
 module.exports = router;
 
