@@ -23,6 +23,7 @@ const Mutation = new GraphQLObjectType({
     addPlant   : PlantMutation.addOne,
     editPlant  : PlantMutation.editOne,
     deletePlant: PlantMutation.deleteOne,
+    waterPlant : PlantMutation.waterOne,
   },
 });
 

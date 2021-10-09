@@ -61,4 +61,11 @@ module.exports = {
       return emptyPlant;
     },
   },
+  waterOne: {
+    type: PlantType,
+    args: { id },
+    resolve(_parent, args) {
+      return PlantModel.waterPlant(args.id);
+    },
+  },
 };
