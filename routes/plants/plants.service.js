@@ -45,12 +45,12 @@ async function createPlant(plant) {
   }
 
   const newPlant = {
-    "id":              uuidv4(),
-    "name":            plant.name,
-    "type":            plant.type,
+    "id"             : uuidv4(),
+    "name"           : plant.name,
+    "type"           : plant.type,
     "water_frequency": plant.water_frequency,
-    "image_url":       plant.image_url,
-    "last_watered":    getEpochTime(plant.last_watered) || 0
+    "image_url"      : plant.image_url,
+    "last_watered"   : getEpochTime(plant.last_watered) || 0,
   };
 
   const data = readFile();
@@ -106,9 +106,9 @@ async function waterPlant(id) {
   return plantToWater;
 }
 
-/**
- * Helper Functions
- */
+//
+// Helper Functions
+//
 
 function readFile() {
   return JSON.parse(fs.readFileSync(FILE_PATH));
