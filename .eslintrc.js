@@ -35,7 +35,7 @@ module.exports = {
     "no-multi-assign"     : ["error"],
     "no-unused-vars"      : ["warn"],
     "object-curly-newline": ["error", {
-      "minProperties": 2,
+      "minProperties": 3,
       "consistent"   : true, 
     }],
     "object-curly-spacing"   : ["error", "always", { "arraysInObjects": false }],
