@@ -2,6 +2,7 @@
 ***A simple Express server for week 7 review***
 
 - [Installation](#installation)
+- [Authentication](#authentication)
 - [REST API](#rest-api)
 - [GraphQL](#graphql-api)
 
@@ -21,13 +22,13 @@ $ node index.js
 $ npm run dev
 ```
 
-# REST API
-
-## 🔒 AUTHENTICATION
+# Authentication
 You must provide an API key as a query string to every request.  
 ```
 ?api_key=<YOUR API KEY>
 ```
+
+# REST API
 
 ## 💐 GET
 ### /plants 
