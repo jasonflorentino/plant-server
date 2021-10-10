@@ -4,7 +4,7 @@
 - [Installation](#installation)
 - [Authentication](#authentication)
 - [REST API](#rest-api)
-- [GraphQL](#graphql-api)
+- [GraphQL API](#graphql-api)
 
 # Installation
 
