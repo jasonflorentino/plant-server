@@ -86,10 +86,10 @@ You must provide an API key as a query string to every request.
 
 # GraphQL API
 
-## Endpoints
+## 🌿 Endpoints
 All GraphQL queries should be sent as GET or POST requests to `/graphql`
 
-## Objects
+## 🌵 Objects
 
 ### Plant
 ```graphql
@@ -103,60 +103,65 @@ Plant {
 }
 ```
 
-## Queries
+## 💐 Queries
 
 ### `plant`
 Returns one plant by ID.
 
-#### Arguments
-`id`:`ID` The ID of the plant to get. (Required)
-#### Possible Returns
-`plant.*` Any requested field from the Plant object
-
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | `id` | `ID` | The ID of the plant to get | ✅ |
+| **Possible Returns** | `plant.*` | `Plant` |  Any requested field from the Plant object | --- |
 
 ### `plants`
 Returns a list of plants
 
-## Mutations
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | *none* | --- | --- | --- |
+| **Possible Returns** | --- | `Plant[]` |  A list of Plant objects and any of their requested fields | --- |
+
+## 🌱 Mutations
 
 ### `addPlant`
 Creates a new plant
 
-### Arguments
-`name`:`String` The name of the new plant. (Required)  
-`type`:`String` The type of the new plant. (Required)  
-`water_frequency`:`Int` Number of days after which the plant should be watered. (Required)  
-`image_url`:`String` The URL for the image of the plant. (Required)  
-`last_watered`:`String` When the plant was last watered in "YYYY-MM-DD" format.
-
-#### Possible Returns
-`plant.*` Any requested field from the newly created Plant object
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | `name` | `String` | The name of the new plant | ✅ |
+|                | `type` | `String` | The type of the new plant | ✅ |
+|                | `water_frequency` | `Int` | Number of days after which the plant should be watered | ✅ |
+|                | `image_url` | `String` | The URL for the image of the plant | ✅ |
+|                | `last_watered` | `String` | When the plant was last watered in "YYYY-MM-DD" format | ❌ |
+| **Possible Returns** | `plant.*` | `Plant` |  Any requested field from the newly created Plant object | --- |
 
 ### `editPlant`
 Edits a plant given its ID.
 
-#### Arguments
-`id`:`ID` The ID of the plant to edit. (Required)
-`Plant.*` Any fields from the Plant object that should be updated.
-
-#### Possible Returns
-`plant.*` Any requested field from the newly created Plant object
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | `id` | `ID` | The ID of the plant to edit | ✅ |
+|                | `name` | `String` | The new name for the plan | ❌ |
+|                | `type` | `String` | The new type for the plant | ❌ |
+|                | `water_frequency` | `Int` | Number of days after which the plant should be watered | ❌ |
+|                | `image_url` | `String` | The new URL for the plant's image | ❌ |
+|                | `last_watered` | `String` | When the plant was last watered in "YYYY-MM-DD" format | ❌ |
+| **Possible Returns** | `plant.*` | `Plant` |  Any fields from the updated Plant object | --- |
 
 ### `deletePlant`
 Deletes a plant given its ID.
 
-#### Arguments
-`id`:`ID` The ID of the plant to delete. (Required)
-
-#### Possible Returns
-`id`:`ID` The ID of the deleted plant.
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | `id` | `ID` | The ID of the plant to delete | ✅ |
+| **Possible Returns** | `plant.id` | `ID` |  The ID of the deleted plant | --- |
 
 ### `waterPlant`
 Waters a plant given its ID.
 
-#### Arguments
-`id`:`ID` The ID of the plant to water. (Required)
 
-#### Possible Returns
-`plant.*` Any requested field from the updated Plant object
+|   | Name | Type | Description | Required? |
+| :--- | :--- | :--- | :--- | :---: |
+| **Arguments**  | `id` | `ID` | The ID of the plant to water | ✅ |
+| **Possible Returns** | `plant.*` | `Plant` |  Any requested field from the updated Plant object | --- |
 
