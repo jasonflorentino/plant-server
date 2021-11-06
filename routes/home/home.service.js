@@ -7,7 +7,8 @@ module.exports = {
 
 async function homepage() {
   const markdown = fs.readFileSync("./README.md", "utf8");
-  const html = marked(markdown);
+  const processed = preprocessMdText(markdown) ;
+  const html = marked(processed);
   const webpage = makeHtmlDoc(html);
   return webpage;
 }
@@ -28,4 +29,11 @@ function makeHtmlDoc(bodyContent) {
     </body>
     </html>
   `;
+}
+
+function preprocessMdText(text) {
+  return text
+    // Add extra line break before code
+    // blocks to avoid breaking during render
+    .replace(/```/g, "\n```");
 }
