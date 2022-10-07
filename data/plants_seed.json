@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Pam",
+    "type": "Big Green One",
+    "water_frequency": 7,
+    "image_url": "https://images.pexels.com/photos/3644742/pexels-photo-3644742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "last_watered": 1620925225646
+  },
+  {
+    "id": "2",
+    "name": "Spiky",
+    "type": "Cactus",
+    "water_frequency": 30,
+    "image_url": "https://images.pexels.com/photos/1903965/pexels-photo-1903965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "last_watered": 1619300225646
+  },
+  {
+    "id": "3",
+    "name": "Bobby",
+    "type": "Basil",
+    "water_frequency": 2,
+    "image_url": "https://images.pexels.com/photos/977903/pexels-photo-977903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "last_watered": 1621125225646
+  },
+  {
+    "id": "e989a39a-4c7d-4ffe-bd1a-5ff2af8f05ec",
+    "name": "Jerry",
+    "type": "Monstera",
+    "water_frequency": 7,
+    "image_url": "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9uc3RlcmF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "last_watered": 1621396800000
+  },
+  {
+    "id": "bf80310b-dcda-424a-b604-8a7be1e0d12e",
+    "name": "Fernando",
+    "type": "Fiddle-leaf Fig",
+    "water_frequency": 12,
+    "image_url": "https://images.unsplash.com/photo-1545239705-1564e58b9e4a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGZpZGRsZSUyMGxlYWYlMjBmaWd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "last_watered": 1621540439062
+  }
+]
