@@ -1,3 +1,13 @@
+## Deprecation Notice
+
+Hi all, I'm sorry to say but starting October 7, 2024 the plant server will no longer be available at plantserver.fun. Going to let the domain expire since I think this server's time has come I don't want to keep paying for the domain. Sorry for any inconvenience! You're welcome to take this and spin it up yourself if you'd like!
+
+Love,
+
+—Jason, Sept 2024
+
+---
+
 # 🪴 Plant Tracker Server
 ***A simple Express server for week 7 review***
 
@@ -23,7 +33,7 @@ $ npm run dev
 ```
 
 # Authentication
-You must provide an API key as a query string to every request.  
+You must provide an API key as a query string to every request.
 ```
 ?api_key=<YOUR API KEY>
 ```
@@ -31,11 +41,11 @@ You must provide an API key as a query string to every request.
 # REST API
 
 ## 💐 GET
-### /plants 
+### /plants
 - Gets an array of all plants.
 
 ### /plants/:id
-- Gets a single plant by its id.  
+- Gets a single plant by its id.
 - Example response:
 ```json
 {
@@ -50,7 +60,7 @@ You must provide an API key as a query string to every request.
 
 ## 🌱 POST
 ### /plants
-- Adds a new plant record.  
+- Adds a new plant record.
 - Requires a body:
 ```javascript
 {
@@ -65,12 +75,12 @@ You must provide an API key as a query string to every request.
 
 ## 🥀 DELETE
 ### /plants/:id
-- Deletes a single plant by its id.  
+- Deletes a single plant by its id.
 - Response: # of plant records
 
 ## 🍀 PUT
 ### /plants/edit/:id
-- Edits a plant by its id.  
+- Edits a plant by its id.
 - Requires a body with the properties to be updated. Example:
 ```json
 {
@@ -81,7 +91,7 @@ You must provide an API key as a query string to every request.
 - Response: The updated plant object
 
 ### /plants/water/:id
-- Updates the last_watered date to the current time.  
+- Updates the last_watered date to the current time.
 - Response: The updated plant object
 
 # GraphQL API
@@ -164,4 +174,3 @@ Waters a plant given its ID.
 | :--- | :--- | :--- | :--- | :---: |
 | **Arguments**  | `id` | `ID` | The ID of the plant to water | ✅ |
 | **Possible Returns** | `plant.*` | `Plant` |  Any requested field from the updated Plant object | --- |
-
